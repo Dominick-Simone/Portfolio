@@ -3,17 +3,15 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useLocation } from "react-router-dom";
 
-import Resume from "../../Resume.pdf"
+
 const navigation = [
     { name: 'About', href: '/', current: true },
     { name: 'Projects', href: '/projects', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Resume', href: Resume, current: false },
+    { name: 'Resume', src: "./Resume.pdf", current: false },
 ]
 
-function onResumeClick() {
-    window.open(Resume);
-  }
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -48,8 +46,8 @@ export default function Header() {
                                                 return (<Disclosure.Button
                                                     key={item.name}
                                                     as="a"
+                                                    src={item.href}
                                                     target="_blank"
-                                                    onClick={onResumeClick}
                                                     className={classNames(
                                                         pageLoc == item.href ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                         'block rounded-md px-3 py-2 text-base font-medium'
