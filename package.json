@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dominick-simone.github.io/Portfolio",
+  "homepage": "https://dominick-simone.github.io/Portfolio/",
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
