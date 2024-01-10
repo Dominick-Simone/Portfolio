@@ -3,12 +3,12 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useLocation } from "react-router-dom";
 
-
+import Resume from "../../Resume.pdf"
 const navigation = [
     { name: 'About', href: '/', current: true },
     { name: 'Projects', href: '/projects', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Resume', href: "./Resume.pdf", current: false },
+    { name: 'Resume', href: Resume, current: false },
 ]
 
 
