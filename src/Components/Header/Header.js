@@ -46,8 +46,7 @@ export default function Header() {
                                                 return (<Disclosure.Button
                                                     key={item.name}
                                                     as="a"
-                                                    src={item.href}
-                                                    target="_blank"
+                                                    href={item.href}
                                                     className={classNames(
                                                         pageLoc == item.href ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                         'block rounded-md px-3 py-2 text-base font-medium'
