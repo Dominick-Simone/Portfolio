@@ -59,10 +59,9 @@ export default function ContactForm() {
     //   } catch (err) {
     //     console.log(err.message)
     //   }
-      
     }
   return (
-    <div className="isolate bg-white px-6 py-10 sm:py-10 lg:px-8">
+    <div className="isolate bg-white px-6 py-10  h-screen sm:py-10 lg:px-8 bg-gray-300">
       
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Me</h2>
@@ -70,7 +69,7 @@ export default function ContactForm() {
           Contact me for any business inquiries!
         </p>
       </div>
-      <form action="#" method="POST" className="mx-auto mt-6 max-w-xl sm:mt-6">
+      <form onSubmit={handleFormSubmit} className="mx-auto mt-6 max-w-xl sm:mt-6">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -81,6 +80,7 @@ export default function ContactForm() {
                 type="text"
                 name="first-name"
                 id="first-name"
+                onChange={handleFirstNameChange}
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -95,6 +95,7 @@ export default function ContactForm() {
                 type="text"
                 name="last-name"
                 id="last-name"
+                onChange={handleLastNameChange}
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -109,6 +110,7 @@ export default function ContactForm() {
                 type="text"
                 name="company"
                 id="company"
+                onChange={handleCompanyChange}
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -123,6 +125,7 @@ export default function ContactForm() {
                 type="email"
                 name="email"
                 id="email"
+                onChange={handleEmailChange}
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -155,6 +158,7 @@ export default function ContactForm() {
                 type="tel"
                 name="phone-number"
                 id="phone-number"
+                onChange={handlePhoneNumberChange}
                 autoComplete="tel"
                 className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
@@ -168,6 +172,7 @@ export default function ContactForm() {
               <textarea
                 name="message"
                 id="message"
+                onChange={handleMessageChange}
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 defaultValue={''}
