@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
-
+import { sendEmail } from '../../API'
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -49,16 +49,16 @@ export default function ContactForm() {
           phone_number,
           message
       }
-    //   try {
-    //     const response = sendEmail(email)
-    //     const { body, status } = await response.json()
-    //     if (response.status != 200) {
-    //       throw new Error('something went wrong!');
-    //     }
+      try {
+        const response = sendEmail(emailMessage)
+        const { body, status } = await response.json()
+        if (response.status != 200) {
+          throw new Error('something went wrong!');
+        }
 
-    //   } catch (err) {
-    //     console.log(err.message)
-    //   }
+      } catch (err) {
+        console.log(err.message)
+      }
     }
   return (
     <div className="isolate bg-white px-6 py-10  h-screen sm:py-10 lg:px-8 bg-gray-300">
@@ -66,7 +66,7 @@ export default function ContactForm() {
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Me</h2>
         <p className="mt-4 text-lg leading-8 text-gray-600">
-          Contact me for any business inquiries!
+          Not currently setup to receive emails. Contact directly, info in resume.
         </p>
       </div>
       <form onSubmit={handleFormSubmit} className="mx-auto mt-6 max-w-xl sm:mt-6">

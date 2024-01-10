@@ -1,3 +1,5 @@
 # This is my Portfolio
 
-This project was created with React, TailwindCSS, and AWS SES
+This project was created with React, TailwindCSS, and AWS SES.
+
+Deployed with AWS Amplify

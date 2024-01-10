@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://lbld35h834.execute-api.us-east-1.amazonaws.com/dev", 
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",

@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const navigation = [
     { name: 'Github', href: 'https://github.com/dominick-simone', src: "./github.png" },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/dominick-simone-b6964b218/', src: "./linkedin.png" },
-    { name: 'Email', href: 'mailto:domsimonedev@gmail.com', src: "./email.png" },
+    { name: 'Email', href: 'mailto:domsimonedev@gmail.com', src: "./mail.png" },
 ]
 
 
