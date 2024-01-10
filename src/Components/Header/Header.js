@@ -8,7 +8,7 @@ const navigation = [
     { name: 'About', href: '/', current: true },
     { name: 'Projects', href: '/projects', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Resume', src: "./Resume.pdf", current: false },
+    { name: 'Resume', href: "./Resume.pdf", current: false },
 ]
 
 
