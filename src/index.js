@@ -24,6 +24,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
+  {
+    path: "/Resume.pdf",
+    src: "./Resume.pdf"
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
