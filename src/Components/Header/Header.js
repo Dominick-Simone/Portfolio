@@ -5,9 +5,9 @@ import { useLocation } from "react-router-dom";
 
 
 const navigation = [
-    { name: 'About', href: '/Portfolio', current: true },
-    { name: 'Projects', href: '/Portfolio/projects', current: false },
-    { name: 'Contact', href: '/Portfolio/contact', current: false },
+    { name: 'About', href: '/', current: true },
+    { name: 'Projects', href: '/projects', current: false },
+    { name: 'Contact', href: '/contact', current: false },
     { name: 'Resume', href: "./Resume.pdf", current: false },
 ]
 
