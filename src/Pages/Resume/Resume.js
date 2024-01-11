@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
-import Resume from '../../Resume.pdf'
+import Resume from './Resume.pdf'
 const Resume = () => {
   return (
     <>
