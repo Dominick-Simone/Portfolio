@@ -25,10 +25,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
-  {
-    path: "/resume",
-    element: <Resume />,
-  }
+  // {
+  //   path: "/resume",
+  //   element: <Resume />,
+  // }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

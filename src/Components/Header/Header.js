@@ -8,7 +8,7 @@ const navigation = [
     { name: 'About', href: '/', current: true },
     { name: 'Projects', href: '/projects', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Resume', href: "/resume", current: false },
+    { name: 'Resume', href: "https://drive.google.com/file/d/1gJwHPprook4xDFypbE1snynr7g7hPKHd/view?usp=sharing", current: false },
 ]
 
 
@@ -42,8 +42,21 @@ export default function Header() {
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => {
-                                            return (
-                                                <Link to={item.href}>
+                                            if (item.name == "Resume") {
+                                                return (<Link to={item.href} target="_blank"><Disclosure.Button
+                                                    key={item.name}
+                                                    as="a"
+                                                    className={classNames(
+                                                        pageLoc == item.href ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                        'block rounded-md px-3 py-2 text-base font-medium'
+                                                    )}
+                                                    aria-current={item.current ? 'page' : undefined}
+                                                >
+                                                    {item.name}
+                                                </Disclosure.Button></Link>)
+                                            } else {
+                                                return (
+                                                    <Link to={item.href}>
                                                     <Disclosure.Button
                                                         key={item.name}
                                                         as="a"
@@ -54,9 +67,8 @@ export default function Header() {
                                                         aria-current={item.current ? 'page' : undefined}
                                                     >
                                                         {item.name}
-                                                    </Disclosure.Button>
-                                                </Link>
-                                                )
+                                                    </Disclosure.Button></Link>)
+                                            }
                                         })}
                                     </div>
                                 </div>
