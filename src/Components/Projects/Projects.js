@@ -28,12 +28,12 @@ const projects = [
     },
     {
         id: 4,
-        name: 'Weather App',
-        githubLink: 'https://github.com/Dominick-Simone/Weather-App',
-        herokuLink: "https://dominick-simone.github.io/Weather-App/",
-        imageSrc: './Weather-App.png',
-        imageAlt: "Weather App",
-        description: 'This application uses a Weather API to generate the cities weather details, and five day forecast based on the city that the user searches.',
+        name: 'Merp',
+        githubLink: '',
+        herokuLink: "https://www.merp.page/",
+        imageSrc: './Merp.png',
+        imageAlt: "Merp Yelp for Cannabis",
+        description: "Merp is a like a Yelp for impact-focused minority cannabis brands. It showcases lots of different sellers. I transferred the backend from REST API's to GraphQL API's. I also made bug fixes, and optimized SEO.",
     },
     // More products...
 ]
@@ -87,11 +87,13 @@ export default function Projects() {
                                             </div>
                                             <div>
 
+                                                {project.name == "Merp" ? '': (
                                                 <h1 className="text-md px-8 text-gray-800">
                                                     <a href={project.githubLink} target="_blank">
                                                         Link to Github Repo
                                                     </a>
-                                                </h1>
+                                                </h1>)
+                                                }
                                             </div>
                                         </div>
                                     </div>

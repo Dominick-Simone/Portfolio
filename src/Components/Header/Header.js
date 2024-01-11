@@ -1,14 +1,14 @@
 import { Fragment, } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 
 const navigation = [
     { name: 'About', href: '/', current: true },
     { name: 'Projects', href: '/projects', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Resume', href: "./Resume.pdf", current: false },
+    { name: 'Resume', href: "/resume", current: false },
 ]
 
 
@@ -42,25 +42,11 @@ export default function Header() {
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4">
                                         {navigation.map((item) => {
-                                            if (item.name == "Resume") {
-                                                return (<Disclosure.Button
-                                                    key={item.name}
-                                                    as="a"
-                                                    href={item.href}
-                                                    className={classNames(
-                                                        pageLoc == item.href ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                        'block rounded-md px-3 py-2 text-base font-medium'
-                                                    )}
-                                                    aria-current={item.current ? 'page' : undefined}
-                                                >
-                                                    {item.name}
-                                                </Disclosure.Button>)
-                                            } else {
-                                                return (
+                                            return (
+                                                <Link to={item.href}>
                                                     <Disclosure.Button
                                                         key={item.name}
                                                         as="a"
-                                                        href={item.href}
                                                         className={classNames(
                                                             pageLoc == item.href ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                             'block rounded-md px-3 py-2 text-base font-medium'
@@ -68,8 +54,9 @@ export default function Header() {
                                                         aria-current={item.current ? 'page' : undefined}
                                                     >
                                                         {item.name}
-                                                    </Disclosure.Button>)
-                                            }
+                                                    </Disclosure.Button>
+                                                </Link>
+                                                )
                                         })}
                                     </div>
                                 </div>

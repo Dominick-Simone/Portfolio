@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Switch } from '@headlessui/react'
 import { sendEmail } from '../../API'
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -50,18 +51,24 @@ export default function ContactForm() {
           message
       }
       try {
-        const response = sendEmail(emailMessage)
-        const { body, status } = await response.json()
+        const response = await sendEmail(emailMessage)
+        const body = await response.json()
+        console.log(body)
         if (response.status != 200) {
           throw new Error('something went wrong!');
         }
-
+        // sendEmail(emailMessage).then(async (data) => {
+        //   let response = await data.json()
+        //   console.log(response)
+        // }).catch((error) => {
+        //   console.log(error);
+        // });
       } catch (err) {
         console.log(err.message)
       }
     }
   return (
-    <div className="isolate bg-white px-6 py-10  h-screen sm:py-10 lg:px-8 bg-gray-300">
+    <div className="isolate px-6 py-10  h-screen sm:py-10 lg:px-8 bg-gray-300">
       
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Me</h2>
