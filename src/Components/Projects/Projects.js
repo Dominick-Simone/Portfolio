@@ -10,6 +10,15 @@ const projects = [
     },
     {
         id: 2,
+        name: 'Merp',
+        githubLink: '',
+        herokuLink: "https://www.merp.page/",
+        imageSrc: './Merp.png',
+        imageAlt: "Merp Yelp for Cannabis",
+        description: "Merp is a like a Yelp for impact-focused minority cannabis brands. It showcases lots of different sellers. I transferred the backend from REST API's to GraphQL API's. I also made bug fixes, and optimized SEO.",
+    },
+    {
+        id: 3,
         name: 'Note Taker App',
         githubLink: 'https://github.com/Dominick-Simone/Note-Taker',
         herokuLink: "https://thawing-coast-14961.herokuapp.com/",
@@ -18,23 +27,15 @@ const projects = [
         description: 'This application allows users to create notes that will be saved to a json file instead of a database. It also allows user to delete previous notes and will update the json file with the new list of notes after each note is deleted.',
     },
     {
-        id: 3,
+        id: 4,
         name: 'NFL Betting App',
-        githubLink: 'https://github.com/Dominick-Simone/Weather-App',
+        githubLink: 'https://github.com/Dominick-Simone/NFL_Bets',
         herokuLink: "https://nfl-bets.herokuapp.com/",
         imageSrc: './NFL-Bets.png',
         imageAlt: "Mock NFL Betting App",
         description: 'This application uses an NFL API to get information about the NFL game schedule to allow users to choose to bet on whether a team will win or lose in the specified game. The user has to make an account, and then they can choose a favorite team and start betting. This application was created in NodeJS, it uses MySQL as the database, and ExpressJS for the server.',
     },
-    {
-        id: 4,
-        name: 'Merp',
-        githubLink: '',
-        herokuLink: "https://www.merp.page/",
-        imageSrc: './Merp.png',
-        imageAlt: "Merp Yelp for Cannabis",
-        description: "Merp is a like a Yelp for impact-focused minority cannabis brands. It showcases lots of different sellers. I transferred the backend from REST API's to GraphQL API's. I also made bug fixes, and optimized SEO.",
-    },
+    
     // More products...
 ]
 export default function Projects() {
