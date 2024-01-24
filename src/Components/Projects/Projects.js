@@ -51,7 +51,7 @@ export default function Projects() {
                         <div className="mx-auto max-w-2xl  py-8  sm:py-12 lg:max-w-7xl ">
                         <div className="flex justify-center">
 
-                            <h1 className="text-lg font-bold tracking-tight text-gray-800">Some apps deployed links may take a few seconds to load since they are not accessed often.</h1>
+                            <h1 className="text-lg font-bold tracking-tight text-gray-800">Some deployed links may take a few seconds to load since they may not be accessed often.</h1>
                     </div>
 
                             <div className="mt-6 grid grid-cols-1 px-2 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:gap-x-16">
