@@ -7,7 +7,7 @@ import { useLocation, Link } from "react-router-dom";
 const navigation = [
     { name: 'About', href: '/', current: true },
     { name: 'Projects', href: '/projects', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    // { name: 'Contact', href: '/contact', current: false },
     { name: 'Resume', href: "https://drive.google.com/file/d/1gJwHPprook4xDFypbE1snynr7g7hPKHd/view?usp=sharing", current: false },
 ]
 
